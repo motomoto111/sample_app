@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta charset="utf-8">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+module ApplicationHelper
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
-</html>
+  # ページごとの完全なタイトルを返します。                   # コメント行
+  def full_title(page_title = '')                     # メソッド定義とオプション引数
+    base_title = "Ruby on Rails Tutorial Sample App"  # 変数への代入
+    if page_title.empty?                              # 論理値テスト
+      base_title                                      # 暗黙の戻り値
+    else
+      "#{page_title} | #{base_title}"                 # 文字列の式展開
+    end
+  end
+end
