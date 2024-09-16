@@ -68,6 +68,8 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.2.0)
+    bigdecimal (3.1.8)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -87,6 +89,8 @@ GEM
     debug (1.7.1)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    drb (2.2.0)
+      ruby2_keywords
     erubi (1.13.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -117,6 +121,7 @@ GEM
     mini_portile2 (2.8.7)
     minitest (5.18.0)
     msgpack (1.7.2)
+    mutex_m (0.2.0)
     net-imap (0.4.16)
       date
       net-protocol
@@ -175,6 +180,7 @@ GEM
     reline (0.5.10)
       io-console (~> 0.5)
     rexml (3.3.7)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     selenium-webdriver (4.8.3)
       rexml (~> 3.2, >= 3.2.5)
@@ -220,11 +226,15 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  base64
+  bigdecimal
   bootsnap
   capybara
   debug
+  drb
   importmap-rails
   jbuilder
+  mutex_m
   puma (~> 5.0)
   rails (~> 7.0.8, >= 7.0.8.4)
   selenium-webdriver
