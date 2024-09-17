@@ -156,3 +156,32 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 2524)
 
 
+Started GET "/" for ::1 at 2024-09-17 07:53:26 +0900
+Started GET "/weight_histories" for ::1 at 2024-09-17 07:53:26 +0900
+Started GET "/" for ::1 at 2024-09-17 07:53:26 +0900
+Started GET "/" for ::1 at 2024-09-17 07:53:27 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/weight_histories"):
+  
+Started GET "/" for ::1 at 2024-09-17 07:53:35 +0900
+Started GET "/static_pages/home" for ::1 at 2024-09-17 07:58:01 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 92.7ms | Allocations: 2839)
+  Rendered layout layouts/application.html.erb (Duration: 94.0ms | Allocations: 2935)
+Completed 500 Internal Server Error in 459ms (ActiveRecord: 0.0ms | Allocations: 7044)
+
+
+  
+ActionView::Template::Error (The asset "rails.svg" is not present in the asset pipeline.
+):
+    10:   <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+    11: </div>
+    12: 
+    13: <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"),
+    14:                       "https://rubyonrails.org/" %>
+  
+app/views/static_pages/home.html.erb:13
