@@ -487,3 +487,43 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 360ms (Views: 356.6ms | ActiveRecord: 0.0ms | Allocations: 48363)
 
 
+Started GET "/" for ::1 at 2024-09-19 06:41:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1319.0ms | Allocations: 46491)
+  Rendered layout layouts/application.html.erb (Duration: 1403.9ms | Allocations: 62971)
+Completed 200 OK in 1640ms (Views: 1453.1ms | ActiveRecord: 0.0ms | Allocations: 67132)
+
+
+Started GET "/" for ::1 at 2024-09-19 06:43:20 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1427.7ms | Allocations: 86058)
+  Rendered layout layouts/application.html.erb (Duration: 1487.9ms | Allocations: 102550)
+Completed 200 OK in 1533ms (Views: 1500.6ms | ActiveRecord: 0.0ms | Allocations: 106711)
+
+
+Started GET "/" for ::1 at 2024-09-19 06:43:53 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 340.4ms | Allocations: 48159)
+Completed 200 OK in 344ms (Views: 341.2ms | ActiveRecord: 0.0ms | Allocations: 48432)
+
+
+Started GET "/" for ::1 at 2024-09-19 06:48:30 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 840)
+  Rendered layouts/_header.html.erb (Duration: 9.1ms | Allocations: 269)
+  Rendered layouts/_footer.html.erb (Duration: 5.8ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 409.4ms | Allocations: 49288)
+Completed 200 OK in 424ms (Views: 419.3ms | ActiveRecord: 0.0ms | Allocations: 50092)
+
+
