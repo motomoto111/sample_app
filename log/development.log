@@ -180,3 +180,16 @@ Migrating to AddIndexToUsersEmail (20240920120219)
   [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToUsers (20240920121334)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240920121334"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "users"."email" AS "users_email" FROM "users" GROUP BY "users"."email" HAVING (count(email) > 1)[0m
+  [1m[36mUser Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "users"."email" AS "users_email" FROM "users" GROUP BY "users"."email" HAVING (count(email) > 1)[0m
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "users"."email" AS "users_email" FROM "users" GROUP BY "users"."email" HAVING (count(email) > 1)[0m
+  [1m[36mUser Pluck (0.7ms)[0m  [1m[34mSELECT "users"."email" FROM "users" GROUP BY "users"."email" HAVING (count(email) > 1)[0m
+  [1m[36mUser Pluck (0.5ms)[0m  [1m[34mSELECT "users"."email" FROM "users" GROUP BY "users"."email" HAVING (count(email) > 1)[0m
