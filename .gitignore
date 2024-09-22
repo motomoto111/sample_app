@@ -4,3 +4,6 @@
 /log/*
 /tmp/*
 
+# Ignore SQLite3 database files
+db/*.sqlite3
+db/*.sqlite3-journal
