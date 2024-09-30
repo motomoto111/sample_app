@@ -23,6 +23,11 @@ gem 'hirb'
 gem "active_storage_validations", "0.9.8"
 gem "image_processing",           "1.12.2"
 gem 'pg', '~> 1.1'
+gem 'mutex_m'
+gem 'base64'
+gem 'bigdecimal'
+gem 'drb'
+
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
