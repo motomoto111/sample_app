@@ -81,6 +81,19 @@ end
   def unfollow(other_user)
     following.delete(other_user)
   end
+  # パスワード再設定の期限が切れている場合はtrueを返す
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
+  # ユーザーのステータスフィードを返す
+  def feed
+    following_ids = "SELECT followed_id FROM relationships
+                     WHERE  follower_id = :user_id"
+    Micropost.where("user_id IN (#{following_ids})
+                     OR user_id = :user_id", user_id: id)
+             .includes(:user, image_attachment: :blob)
+  end
 
   # 現在のユーザーが他のユーザーをフォローしていればtrueを返す
   def following?(other_user)
