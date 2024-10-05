@@ -28,7 +28,6 @@ gem 'base64'
 gem 'bigdecimal'
 gem 'drb'
 
-
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
@@ -36,11 +35,17 @@ end
 group :development do
   gem "web-console"
   gem 'letter_opener'
+  gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
 end
 
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
+  gem "minitest",                 "5.18.0"
+  gem "minitest-reporters",       "1.6.0"
+  gem "guard",                    "2.18.0"
+  gem "guard-minitest",           "2.4.6"
 end
 
 group :production do
